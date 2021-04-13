@@ -1,0 +1,248 @@
+body, html { 
+  background-color: rgb(250, 216, 212); 
+  margin-top: 0; 
+  margin-left: 0; 
+  margin-right: 0;
+  margin-bottom: 0;
+  overflow-x: hidden; 
+}
+
+nav {
+  text-align: center;
+  flex: 1;
+  background-color:#ff6961;
+  padding: 10px;
+  margin-bottom: 5em;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(128,0,0);
+  font-family: 'OrganicVines', serif;
+  font-size: 30px;
+  padding: 10px;
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+}
+
+li {
+  list-style-type: none;  
+  margin: 0 2vw;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+.h1container {
+  background-color: #f77d77;
+  padding: 1vw;
+}
+
+h1 {
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(122, 40, 40);
+  font-size: 100px;
+}
+
+.middle-container {
+  background-color: rgb(250, 226, 212);
+  margin-inline-start: 30em;
+  margin-inline-end: 25em;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  position: relative;
+  text-align: center;
+  align-content: center;
+  width: 60em;
+  margin-bottom: 5em;
+  display:inline-block;
+}
+
+.imgcontainer {
+  position: relative;
+  text-align: center;
+}
+
+.imgtext {
+  position: absolute;
+  margin-top: 1em;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  font-family: 'OrganicVines', serif;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 27px;
+  color: rgb(94, 110, 96);
+}
+
+p {
+  font-family: 'OrganicVines', serif;
+  font-size: 20px;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+@media screen and (min-width: 601px) {
+  .image1{
+    width: 700px;
+  }
+}
+
+/*Fruit-Box*/
+.fruit-contanter {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-flow: column wrap;
+}
+
+.fruit-contanter > div > .image1{
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+}
+
+/*Phone-size Screen*/
+@media screen and (max-width: 600px) {
+ h1{
+    font-size: 70px;
+  }
+  .image1 {
+    width: 450px;
+  }
+  .imgtext{
+    font-size: 20px;
+  }
+  a {
+    font-size: 20px;
+  }
+  
+  .middle-container{
+    float: left;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 6em;
+    width: 300px;
+  }
+}
+
+/*Proucts*/
+.image2 {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  border-radius: 1vmin;
+}
+
+.ul2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2vmin;
+}
+
+.li2 {
+  height: 40vh;
+  flex-grow: 1;
+  margin: 2vmin;
+}
+
+.li2:last-child {
+  flex-grow: 10;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .li2 {
+    height: 30vh;
+  }
+}
+
+@media (max-height: 480px) {
+  .li2 {
+    height: 80vh;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .image1 {
+    width: 300px;
+  }
+  .ul2 {
+    flex-direction: row;
+  }
+
+  .li2 {
+    height: auto;
+    width: 100%;
+  }
+  .image2 {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+/*Caroseul*/
+.pic-ctn {   
+  width: 100vw;   
+  height: 100px;
+}  
+@keyframes display {   
+  0% {     
+  transform: translateX(200px);     
+  opacity: 0;   
+  }   
+  10% {     
+    transform: translateX(0);     
+    opacity: 1;   
+  }   
+  20% {     
+    transform: translateX(0);     
+    opacity: 1;
+  }   
+  30% {     
+    transform: translateX(-200px);     
+    opacity: 0;   
+  }   
+  100% {     
+    transform: translateX(-200px);     
+    opacity: 0;   
+  }
+}  
+.pic-ctn {   
+  position: relative;   
+  width: 100vw;   
+  height: 300px;   
+  margin-top: 0; 
+  margin-bottom: 15em;
+}  
+.pic-ctn > .image1 {   
+  position: absolute;   
+  top: 0;   
+  left: calc(12% - 100px); 
+  scroll-margin-right: 50% ;
+  opacity: 0;   
+  animation: display 10s infinite; 
+}  
+.image1:nth-child(2) {   
+  animation-delay: 2s; 
+} 
+.image1:nth-child(3) {   
+  animation-delay: 4s; 
+}
+
+@font-face {
+  font-family: "OrganicVines";
+  src: url("fruit_market/fonts/OrganicVines.ttf");
+}
+
