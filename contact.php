@@ -72,17 +72,12 @@
              border-color:#017572;
           }
           
-          h2{
-             text-align: center;
-             color: #017572;
-          }
+
        </style>
        
     </head>
    
     <body>
-       
-       <h2>Enter Username and Password</h2> 
        <div class = "container form-signin">
           
           <?php
@@ -112,15 +107,14 @@
              ?>" method = "post">
              <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
              <input type = "text" class = "form-control" 
-                name = "username" placeholder = "username = tutorialspoint" 
+                name = "username" placeholder = "username" 
                 required autofocus></br>
              <input type = "password" class = "form-control"
-                name = "password" placeholder = "password = 1234" required>
+                name = "password" placeholder = "password" required>
              <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
                 name = "login">Login</button>
           </form>
-       
-          Click here to clean <a href = "logout.php" tite = "Logout">Session.
+
           
        </div> 
 
